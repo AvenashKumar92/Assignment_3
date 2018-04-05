@@ -75,6 +75,6 @@
         android:background="@android:color/holo_blue_dark"
         android:textColor="@android:color/white"
         android:textAllCaps="false"
-        android:onClick="OnCreateAccount"/>
+        android:onClick="OnSignUpCreateAccount"/>
 
 </LinearLayout>

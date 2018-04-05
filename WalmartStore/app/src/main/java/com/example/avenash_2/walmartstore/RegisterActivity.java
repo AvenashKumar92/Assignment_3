@@ -17,13 +17,15 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        txtEmail=findViewById(R.id.txtEmail);
-        txtPassword=findViewById(R.id.txtPassword);
+        txtEmail=findViewById(R.id.txtSignUpEmailAddress);
+        txtPassword=findViewById(R.id.txtSignUpPassword);
         txtFirstName=findViewById(R.id.txtFirstName);
         txtLastName=findViewById(R.id.txtLastName);
     }
 
-    public void OnCreateAccount(View view) {
+    public void OnSignUpCreateAccount(View view) {
+        UtilityClass.hideSoftKeyboard(this);
+
         User user=new User(txtFirstName.getText().toString().trim(),
                 txtLastName.getText().toString().trim(),
                 txtEmail.getText().toString().trim(),
@@ -34,7 +36,7 @@ public class RegisterActivity extends AppCompatActivity {
             user.getFisrtName().isEmpty() ||
             user.getLastName().isEmpty())
         {
-            Toast.makeText(getApplicationContext(), "Fields must non empty", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Fields must be non empty", Toast.LENGTH_LONG).show();
             return;
         }
 
