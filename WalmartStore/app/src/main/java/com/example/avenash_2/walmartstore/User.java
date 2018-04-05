@@ -43,7 +43,7 @@ public class User {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return email.equals(user.email) &&
+        return email.equalsIgnoreCase(user.email) &&
                 password.equals(user.password);
     }
 }

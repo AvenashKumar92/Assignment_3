@@ -21,7 +21,7 @@ public class ShoppingActivity extends AppCompatActivity {
     }
 
     public void OnImageClick(View view) {
-        UtilityClass.hideSoftKeyboard(this);
+        //UtilityClass.hideSoftKeyboard(this);
         final int id=view.getId();
         String message="";
         switch(id){

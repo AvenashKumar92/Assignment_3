@@ -42,6 +42,8 @@ public class RegisterActivity extends AppCompatActivity {
 
         UserDataUtils.getInstance().addUser(user);
         resetFields();
+
+        Toast.makeText(getApplicationContext(), "Account created successfully", Toast.LENGTH_LONG).show();
     }
 
     private void resetFields(){

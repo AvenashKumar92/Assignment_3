@@ -19,7 +19,7 @@ public class UserDataUtils {
 
     boolean validateUser(User loginUser){
         for(User user:users){
-            if(user==loginUser){
+            if(user.equals(loginUser)){
                 return true;
             }
         }
