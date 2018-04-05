@@ -7,13 +7,13 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class ShoppingCategory extends AppCompatActivity {
+public class ShoppingActivity extends AppCompatActivity {
 
     TextView lblWelcome;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_shopping_category);
+        setContentView(R.layout.activity_shopping);
         lblWelcome=findViewById(R.id.lblWelcome);
         Intent intent = getIntent();
         String userEmail = intent.getStringExtra(String.valueOf(R.id.txtEmail));
@@ -21,6 +21,7 @@ public class ShoppingCategory extends AppCompatActivity {
     }
 
     public void OnImageClick(View view) {
+        UtilityClass.hideSoftKeyboard(this);
         final int id=view.getId();
         String message="";
         switch(id){

@@ -65,7 +65,7 @@
         android:layout_marginTop="40dp"
         android:onClick="OnSignIn"/>
 
-    <Button
+    <TextView
         android:id="@+id/btnCreateNewAcc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -73,7 +73,13 @@
         android:textAllCaps="false"
         android:layout_below="@id/lblDontHaveAccount"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textColor="@android:color/holo_blue_dark"
+        android:background="@android:color/background_light"
+        android:autoLink="all"
+        android:clickable="true"
+        android:onClick="OnCreateAccount"/>
 
     <ImageView
         android:id="@+id/ivWallmart"
