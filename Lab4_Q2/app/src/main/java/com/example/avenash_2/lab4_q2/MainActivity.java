@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     boolean isNumberEmpty(){
         if(String.valueOf(txtNumber.getText()).isEmpty())
         {
-            Toast.makeText(getApplicationContext(), "Please type the number", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Please type a number", Toast.LENGTH_LONG).show();
             return false;
         }
         return true;
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
         else{
-            Toast.makeText(getApplicationContext(), "Dial intend is not available in the device", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "This device doesn't supports Dial intend", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
         else{
-            Toast.makeText(getApplicationContext(), "SMS intend is not available in the device", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "This device doesn't supports SMS intend", Toast.LENGTH_LONG).show();
         }
         //startActivity(new Intent(Intent.ACTION_VIEW, Uri.fromParts("sms", number, null)));
     }
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
         } else {
-            Toast.makeText(getApplicationContext(), "Whatsapp intend is not available in the device", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "This device doesn't supports Whatsapp intend", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
         else{
-            Toast.makeText(getApplicationContext(), "Email intend is not available in the device", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "This device doesn't supports Email intend", Toast.LENGTH_LONG).show();
         }
     }
 }
